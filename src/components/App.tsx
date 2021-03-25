@@ -13,8 +13,6 @@ const App = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-
-
   useEffect(() => {
     axios.get(MOVIE_API_URL).then(jsonResponse => {
       dispatch({
@@ -23,8 +21,6 @@ const App = () => {
       });
     });
   }, []);
-
-
 
   const search = (searchValue: string) => {
     dispatch({
@@ -48,18 +44,7 @@ const App = () => {
     );
   };
 
-
-
-
   const { movies, errorMessage, loading } = state;
-
-
-  type Movie = {
-    Title: string;
-    imdbID: string;
-    Poster: string;
-    Year: string;
-  }
 
   const retrievedMovies =
     loading && !errorMessage ? (
@@ -67,8 +52,8 @@ const App = () => {
     ) : errorMessage ? (
       <div className="errorMessage">{errorMessage}</div>
     ) : (
-      movies.map((movie: any) => (
-        <Movie key={movie.imdbID} movie={movie} />
+      movies.map((movie, index) => (
+        <Movie key={index} movie={movie} />
       ))
     );
 
