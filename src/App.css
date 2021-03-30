@@ -1,9 +1,11 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3FAAFF;
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -32,8 +34,16 @@
 
 .movies {
   display: flex;
+  text-align: center;
+  justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.moviecard {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 16px 16px -1px rgba(1, 10, 17, 0.1);
 }
 
 .App-header h2 {

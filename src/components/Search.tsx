@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Button, Input } from 'antd';
 
 type SearchProps = {
   search: (searchValue: string) => void;
@@ -24,12 +24,11 @@ function Search({ search }: SearchProps) {
 
   return (
     <form className="search" onSubmit={callSearchFunction}>
-      <input
+      <Input
         value={searchValue}
         onChange={handleSearchInputChanges}
         type="text" />
-
-      <button type="submit">Search</button>
+      <button type="submit">검색</button>
     </form>
   );
 }

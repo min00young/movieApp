@@ -7,6 +7,7 @@ import { initialState, reducer } from "../store/reducer";
 import axios from "axios";
 import spinner from "../assets/ajax-loader.gif";
 
+
 const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";
 
 const App = () => {
